@@ -152,7 +152,7 @@ DNS:http://site.ip138.com</code></pre>
       </categories>
   </entry>
   <entry>
-    <title>虚拟机</title>
+    <title>vmware及kali的安装</title>
     <url>/2020/11/11/%E8%99%9A%E6%8B%9F%E6%9C%BA%E5%BF%85%E4%B8%8D%E5%8F%AF%E5%B0%91/</url>
     <content><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="\assets\css\APlayer.min.css"><script src="\assets\js\APlayer.min.js" class="aplayer-secondary-script-marker"></script><script class="meting-secondary-script-marker" src="\assets\js\Meting.min.js"></script><p>百度VMware官网下载解压包，不过下载的比较慢安装包我百度网盘在下面分享</p>
 <p>链接：<a href="https://pan.baidu.com/s/1ydpHq-KroaBm9KYtVIng2A">https://pan.baidu.com/s/1ydpHq-KroaBm9KYtVIng2A</a><br>提取码：1zqt<br>复制这段内容后打开百度网盘手机App，操作更方便哦</p>
@@ -186,7 +186,7 @@ DNS:http://site.ip138.com</code></pre>
 <p>这里根据自己需要选择工具，xfce是一定要选<br> <img src="https://img-blog.csdnimg.cn/20210508104527925.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3FxXzQ1MzIyMzQz,size_16,color_FFFFFF,t_70" alt="在这里插入图片描述"></p>
 ]]></content>
       <categories>
-        <category>虚拟机</category>
+        <category>kali</category>
       </categories>
       <tags>
         <tag>安全必备</tag>
