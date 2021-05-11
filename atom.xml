@@ -2,7 +2,7 @@
 <feed xmlns="http://www.w3.org/2005/Atom">
   <title>小王和小张的爱情博客</title>
   
-  
+  <subtitle>Our blog</subtitle>
   <link href="http://wmzx1314.我爱你/atom.xml" rel="self"/>
   
   <link href="http://wmzx1314.我爱你/"/>
