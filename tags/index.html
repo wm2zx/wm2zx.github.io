@@ -4,7 +4,7 @@
 
 <head>
     <meta charset="utf-8">
-    <meta name="keywords" content="contact, 小王和小张的足迹">
+    <meta name="keywords" content="标签, 小王和小张的足迹">
     <meta name="description" content="">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
@@ -16,7 +16,7 @@
     <!-- Global site tag (gtag.js) - Google Analytics -->
 
 
-    <title>contact | 小王和小张的足迹</title>
+    <title>标签 | 小王和小张的足迹</title>
     <link rel="icon" type="image/png" href="/medias/favicon.png">
 
     <link rel="stylesheet" type="text/css" href="/libs/awesome/css/all.css">
@@ -329,13 +329,7 @@
 
 </header>
 
-    <link rel="stylesheet" type="text/css" href="/css/style.css" />
-<link rel="stylesheet" type="text/css" href="/css/barrager.css">
-<script src="/libs/valine/av-min.js"></script>
-<script src="/libs/jquery/jquery.min.js"></script>
-<script type="text/javascript" src="/js/jquery.barrager.js"></script>
-
-<div class="bg-cover pd-header about-cover">
+    <div class="bg-cover pd-header about-cover">
     <div class="container">
     <div class="row">
     <div class="col s10 offset-s1 m8 offset-m2 l8 offset-l2">
@@ -383,149 +377,58 @@
     </div>
 </div>
 
-<style>
-    #send{
-        margin-bottom: 10px;
-        width: 49%;
-        background-color: #0ba360;
-    }
-    #clear{
-        margin-bottom: 10px;
-        width: 49%;
-        background-color: #e7c65c;
-    }
-    p{
-        text-align: center;
-    }
-</style>
 <main class="content">
-    <div id="contact" class="container chip-container">
-        <div class="card">
-            <div class="card-content">
-                <div class="tag-title center-align">
-                    <i class="fas fa-comments"></i>&nbsp;&nbsp;留言板
-                </div>
+
+    
+
+<div id="tags" class="container chip-container">
+    <div class="card">
+        <div class="card-content">
+            <div class="tag-title center-align">
+                <i class="fas fa-tags"></i>&nbsp;&nbsp;文章标签
+            </div>
+            <div class="tag-chips">
+                
+                
+                <a href="/tags/%E5%9B%BE%E7%89%87/" title="图片: 1">
+                    <span class="chip center-align waves-effect waves-light
+                             chip-default "
+                            data-tagname="图片" style="background-color: #F9EBEA;">图片
+                        <span class="tag-length">1</span>
+                    </span>
+                </a>
                 
             </div>
-            <!--valine评论弹幕-->
-            
-                <p>
-                    <b>畅所欲言</b><br>
-                    <b>在这里可以留下你的足迹，欢迎在下方留言，欢迎交换友链</b><br>
-                    <b>友链信息</b><br>
-                    <b>博客名称: 小王和小张的足迹</b><br>
-                    <b>博客网址: http://wmzx1314.我爱你</b><br>
-                    <b>博客头像: http://wmzx1314.我爱你/medias/logo.png</b><br>
-                    <b>博客介绍: 犹豫就会败北</b><br>
-                </p>
-                <div class="container">
-                    <section id="custom" class="bb-section">
-                        <div class="row">
-                            <div class="col-md-5">
-                                <form class="form-inline">
-                                    <div class="form-group">
-                                        文字：<input class="form-control" name="info" type="text" placeholder="hello, world"/>
-                                    </div>
-                                    <div class="form-group">
-                                        链接：<input class="form-control" name="href" type="text" placeholder="https://github.com/blinkfox/hexo-theme-matery"/>
-                                    </div>
-                                    <div class="form-group">
-                                        速度：<input  class="form-control"  name="speed" type="text" placeholder="5~20" value="16" />
-                                    </div>
-                                </form>
-                                <div class="form-group">
-                                    <button id="send"  class="btn" onclick="run()">留言</button>
-                                    <button id="clear" class="btn " onclick="clear_barrage()"> 清除</button>
-                                </div>
-                            </div>
-                        </div>
-                    </section>
-                </div>
-
-                <script type="text/javascript">
-                    AV.init({
-                        appId: 'xrbDRicOpPve6VkWuPzaN2r1-gzGzoHsz',
-                        appKey: 'R5oIFaOdHlqyidst4P4zFyqG'
-                    });
-
-                    $(function() {
-                        do_barrager();
-                        async function do_barrager() {
-                            let lists = [];
-                            //查询弹幕
-                            const query = new AV.Query('barrager');
-                            const barrager = await query.find().then((barrager) => {
-                                lists = barrager;
-                            })
-                            let length = lists.length;
-                            let index = 0;
-                            const timer = setInterval(() => {
-                                if (index === length) {
-                                    clearInterval(timer);
-                                    do_barrager()
-                                } else {
-                                    let obj = lists[index]
-                                    let jsonObject = eval('(' + JSON.stringify(obj) + ')');
-                                    $('body').barrager({
-                                        'img': '/medias/barrager/' + Math.floor(Math.random() * 3) + ".png",
-                                        'href': jsonObject.href,
-                                        'info': jsonObject.info,
-                                        'speed': jsonObject.speed
-                                    });
-                                    index++;
-                                }
-                            }, 500)
-                        }
-                    });
-
-                    //发送弹幕
-                    function  run(){
-                        let info = $('input[name=info]').val();
-                        (info === '' ) ?  info='hello world' : info=info;
-                        let href = $('input[name=href]').val();
-                        (href === '' ) ?  href='https://github.com/blinkfox/hexo-theme-matery' : href=href;
-                        let speed = parseInt($('input[name=speed]').val());
-                        if(speed > 20 || speed < 5)
-                            speed = Math.floor(Math.random() * 10) + 5;
-                        const Barrager = AV.Object.extend('barrager');
-                        const barrager = new Barrager();
-                        barrager.set('href', href);
-                        barrager.set('info', info);
-                        barrager.set('speed', speed);
-                        barrager.save().then((todo) => {
-                            $(" input[ name='info' ] ").val("")
-                            $(" input[ name='href' ] ").val("")
-                            $(" input[ name='speed' ] ").val("")
-                        });
-                    }
-
-                    function  clear_barrage()
-                    {
-                        $.fn.barrager.removeAll();
-                    }
-
-                </script>
-            
-        </div>
-
-        <!--其他评论card-->
-        <div class="card">
-            
-
-            
-
-            
-
-            
-
-            
-
-            
-
-            
-
         </div>
     </div>
+</div>
+
+    
+    <link rel="stylesheet" type="text/css" href="/libs/jqcloud/jqcloud.css">
+<style type="text/css">
+    #tag-wordcloud {
+        width: 100%;
+        height: 300px;
+    }
+</style>
+
+<div class="container" data-aos="fade-up">
+    <div class="card">
+        <div id="tag-wordcloud" class="card-content"></div>
+    </div>
+</div>
+
+<script type="text/javascript" src="/libs/jqcloud/jqcloud-1.0.4.min.js"></script>
+<script type="text/javascript">
+    
+
+    $('#tag-wordcloud').jQCloud([{"text":"图片","weight":1,"link":"/tags/图片/"}], {
+        autoResize: true
+    });
+</script>
+
+    
+
 </main>
 
 
